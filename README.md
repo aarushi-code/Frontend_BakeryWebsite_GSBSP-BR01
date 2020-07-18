@@ -1,1 +1,3 @@
-The given project is a part of the Hackathon conducted by Girlscript-Bilaspur Chapter on 18th-19th of July 2020.
+<h2>The given project is a part of the Hackathon conducted by Girlscript-Bilaspur Chapter on 18th-19th of July 2020.</h2>
+<br>
+<h3>The theme of the project is a bakery website titled : "The Relish" - cakes and more....
