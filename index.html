@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+
+        <title>The Relish</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/pricing.css">
+        <link rel="stylesheet" href="css/main.css">
+
+
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                 animation: "slide",
+                 controlsContainer: ".flexslider-container"
+                });
+            });
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            function initialize() {
+                var mapCanvas = document.getElementById('map-canvas');
+                var mapOptions = {
+                    center: new google.maps.LatLng(50.110880, 8.679490),
+                    zoom: 16,
+                    scrollwheel: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions)
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(24.909439, 8.679490),
+                    title:"The Relish"
+                });
+
+                // To add the marker to the map, call setMap();
+                marker.setMap(map);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+<style>
+    body{
+    background:url('images/background.jpg');
+    }
+</style>
+    </head>
+    <body data-spy="scroll" data-target="#template-navbar">
+
+        <!--== 4. Navigation ==-->
+        <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Food-fair-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img id="logo" src="images/logo.jpg" class="logo img-responsive">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="Food-fair-toggle">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#pricing">Menu</a></li>
+                        <li><a href="#breakfast">Bread</a></li>
+                        <li><a href="#featured-dish">Cakes</a></li>
+                        <li><a href="#reserve">Booking</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.row -->
+        </nav>
+
+
+        <!--== 5. Header ==-->
+        <section id="header-slider" class="owl-carousel">
+            <div class="item">
+                <div class="container">
+                    <div class="header-content">
+                        
+                    </div> <!-- /.header-content -->
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="header-content">
+                       
+                    </div> <!-- /.header-content -->
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="header-content text-right pull-right">
+                      
+                    </div> <!-- /.header-content -->
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--== 6. About us ==-->
+        <section id="about" class="about">
+            <img src="images/pic.jpg" class="img-responsive section-icon hidden-sm hidden-xs">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row dis-table">
+                        <div class="hidden-xs col-sm-6 section-bg about-bg dis-table-cell">
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 dis-table-cell">
+                            <div class="section-content">
+                                <h2 class="section-content-title">About us</h2>
+                                <p class="section-content-para">
+                                    We would like to familiarize you a little with our Specialty. Our snacks are fresh and according to taste of both British bakery and Indian spicy snacks. We use fresh creams and veggies. All dishes are spiced and digestible by our chef. If you like to eat spicy or medium spicy food, do not hesitate to state this when placing your order.
+                                </p>
+                                <p class="section-content-para">
+                                    We also offer a variety of vegetarian and English creams. Ask us and we will be happy to give you more information about the ingredients used in our dishes.  Since we prepare all dishes fresh for you, there may be a short wait. We wish you a pleasant stay and above all a good appetite!
+                                </p>
+                            </div> <!-- /.section-content -->
+                        </div>
+                    </div> <!-- /.row -->
+                </div> <!-- /.container-fluid -->
+            </div> <!-- /.wrapper -->
+        </section> <!-- /#about -->
+
+
+        <!--==  7. Afordable Pricing  ==-->
+        <section id="pricing" class="pricing">
+            <div id="w">
+                <div class="pricing-filter">
+                    <div class="pricing-filter-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="section-header">
+                                        <h2 class="pricing-title">Affordable Pricing</h2>
+                                        <ul id="filter-list" class="clearfix">
+                                            <li class="filter" data-filter="all">All</li>
+                                            <li class="filter" data-filter=".breakfast">Snacks</li>
+                                            <li class="filter" data-filter=".special">Munchies</li>
+                                            <li class="filter" data-filter=".desert">Sides</li>
+                                            <li class="filter" data-filter=".dinner">Speciality</li>
+                                        </ul><!-- @end #filter-list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">  
+                        <div class="col-md-10 col-md-offset-1">
+                            <ul id="menu-pricing" class="menu-price">
+                                <li class="item dinner">
+
+                                    <a href="#">
+                                        <img src="images/pic2.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc text-center">
+                                            <span>
+                                                <h3>muffins</h3>
+                                               Delicious muffins available in dark choco, strawberry and other flavours..
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">40/- per pc</h2>
+                                </li>
+
+                                <li class="item breakfast">
+
+                                    <a href="#">
+                                        <img src="images/pic3.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Vanilla Delight Cake</h3>
+                                                Special vanilla cream-dipped cakes with pineapple toppings.
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">300/-</h2>
+                                </li>
+                                <li class="item desert">
+
+                                    <a href="#">
+                                        <img src="images/pic4.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Croissant</h3>
+                                               A sweet delicious dish sprinkled with choco chips and light sugar.
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">30/- per pc</h2>
+                                </li>
+                                <li class="item breakfast special">
+
+                                    <a href="#">
+                                        <img src="images/pic5.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Multigrain veg small pizza</h3>
+                                               Goodness of olives, paprika and cheese.
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">150/-</h2>
+                                </li>
+                                <li class="item breakfast">
+
+                                    <a href="#">
+                                        <img src="images/pic6.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Cookies</h3>
+                                              Delicious choco-chip cookies filled with dark chocolate.
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">25/- per pc</h2>
+                                </li>
+                                <li class="item dinner special">
+
+                                    <a href="#">
+                                        <img src="images/pic7.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Choco-coffee muffin</h3>
+                                                Goodness of coffee and delicious choco.
+                                            </span>
+                                        </div>
+                                    </a>
+
+                                    <h2 class="white">70/- per pc</h2>
+                                </li>
+                                <li class="item desert">
+
+                                    <a href="#">
+                                        <img src="images/food7.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Doughnuts</h3>
+                                               Tasty doughnuts in choco, coffee, vanilla and more..
+                                            </span>
+                                        </div>
+                                    </a>
+
+                                    <h2 class="white">40/- per pc</h2>
+                                </li>
+                                <li class="item dinner">
+
+                                    <a href="#">
+                                        <img src="images/food8.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Spaghetti</h3>
+                                               Mouth-watering veg cheese spaghetti
+                                            </span>
+                                        </div>
+                                    </a>
+
+                                    <h2 class="white">300/-</h2>
+                                </li>
+                                <li class="item desert special">
+
+                                    <a href="#">
+                                        <img src="images/food9.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Brownies</h3>
+                                                Delicious choco vanilla brownies.
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">50/- per pc</h2>
+                                </li>  
+                            </ul>
+
+                          
+
+                        </div>   
+                    </div>
+                </div>
+
+            </div> 
+        </section>
+
+
+        <!--== 8. Great Place to enjoy ==-->
+        <section id="great-place-to-enjoy" class="great-place-to-enjoy">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row dis-table">
+                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
+                            <h2 class="section-title">Authentic blend of Cakes and snacks.</h2>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
+                            
+                        </div>
+                    </div> <!-- /.dis-table -->
+                </div> <!-- /.row -->
+            </div> <!-- /.wrapper -->
+        </section> <!-- /#great-place-to-enjoy -->
+
+
+
+       
+        <!--== 10. Our Breakfast Menu ==-->
+        <section id="breakfast" class="breakfast">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row dis-table">
+                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
+                            <h2 class="section-title">Our Variety of munchies</h2>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
+                            
+                        </div>
+                    </div> <!-- /.dis-table -->
+                </div> <!-- /.row -->
+            </div> <!-- /.wrapper -->
+        </section> <!-- /#breakfast -->
+
+
+
+        <!--== 11. Our Bread ==-->
+        <section id="bread" class="bread">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/">
+            <div class="container-fluid">
+                <div class="row dis-table">
+                    <div class="hidden-xs col-sm-6 dis-table-cell section-bg">
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 dis-table-cell">
+                        <div class="section-content">
+                            <h2 class="section-content-title">
+                                Our Garlic Bread
+                            </h2>
+                            <div class="section-description">
+                                <p class="section-content-para">
+                                   We offer wide range of breads but garlic bread is our special one. We offer this freshly baked garlic bread on very reasoable price.
+                                </p>
+                                <p class="section-content-para">
+                                    Our special cook bakes this very delicious bread everyday with all his heart. We welcome everyone to enjoy this lovely treat with us.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!--== 12. Our Featured Dishes Menu ==-->
+        <section id="featured-dish" class="featured-dish">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row dis-table">
+                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
+                            <h2 class="section-title">Our Featured Snacks Menu</h2>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
+                            
+                        </div>
+                    </div> <!-- /.dis-table -->
+                </div> <!-- /.row -->
+            </div> <!-- /.wrapper -->
+        </section> <!-- /#featured-dish -->
+
+
+
+
+        <!--== 13. Menu List ==-->
+        <section id="menu-list" class="menu-list">
+            <div class="container">
+                <div class="row menu">
+                    <div class="col-md-10 col-md-offset-1 col-sm-9 col-sm-offset-2 col-xs-12">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="menu-catagory">
+                                        <h2>Cakes</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Chocolate blackout</h3>
+                                        <p class="menu-about">Rich chocolate blend with choco-chips</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                    
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                                
+                                                <b><p class="price">400/-</p></b>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Dutch truffle</h3>
+                                        <p class="menu-about">Authentic dark choco taste sprinkled with cherries</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                  
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                               <b><p class="price">350/-</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Red Velvet</h3>
+                                        <p class="menu-about">Rich taste of red velvet blend with choco and vanilla.</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                    
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                                <b><p class="price">410/-</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="menu-catagory">
+                                        <h2>Pasteries</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title"> Trio dip</h3>
+                                        <p class="menu-about">Exotic chocolate taste</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                  
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                               <b><p class="price">40/- per pc</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Blueberry cheesecake</h3>
+                                        <p class="menu-about">The richness of blueberries nd cheese.</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                    
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                                <b><p class="price">45/- per pc</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Hazelnut truffle</h3>
+                                        <p class="menu-about">Goodness of hazelnut with choco delight</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                    
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                               <b><p class="price">45/- per pc</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="menu-catagory">
+                                        <h2>Veggies</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Veg cheese pizza</h3>
+                                        <p class="menu-about">Available in multigrain with goodness of olives</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                 
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                               <b><p class="price">200/-</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Juicy Burgers</h3>
+                                        <p class="menu-about">Extraordinary cheesilicious burgers</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                   
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                                <b><p class="price">110/-</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Spaghetti</h3>
+                                        <p class="menu-about">Gravy cheesiicious pasta</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                   
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                                <b><p class="price">350/-</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                <div class="row">
+                                    <div class="menu-catagory">
+                                        <h2>Special</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Tiramisu croissant</h3>
+                                        <p class="menu-about">Awesome tiramisu with rich choco croissant</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                 
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                               <b><p class="price">100/-</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Orange cheese cake</h3>
+                                        <p class="menu-about">Richness of orange and blend of cheese.</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                   
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                               <b><p class="price">450/-</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="menu-item">
+                                        <h3 class="menu-title">Banoffee pie</h3>
+                                        <p class="menu-about">Cherry sprinkled with choco-chip blended pie.</p>
+
+                                        <div class="menu-system">
+                                            <div class="half">
+                                                <p class="per-head">
+                                                  
+                                                </p>
+                                            </div>
+                                            <div class="half">
+                                                <b><p class="price">170/-</p></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+      
+
+
+
+        <!--== 15. Reserve A Table! ==-->
+        <section id="reserve" class="reserve">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row dis-table">
+                        <div class="col-xs-6 col-sm-6 dis-table-cell color-bg">
+                            <h2 class="section-title">Reserve A Table !</h2>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 dis-table-cell section-bg">
+                            
+                        </div>
+                    </div> <!-- /.dis-table -->
+                </div> <!-- /.row -->
+            </div> <!-- /.wrapper -->
+        </section> <!-- /#reserve -->
+
+
+
+        <section class="reservation">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class=" section-content">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-6">
+                                <form class="reservation-form" method="post" action="reserve.php">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf095;  Phone">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control reserve-form empty iconified" name="datepicker" id="datepicker" required="required" placeholder="&#xf017;  Time">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12">
+                                            <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3" required="required" placeholder="  &#xf086;  We're listening"></textarea>
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12">
+                                            <button type="submit" id="submit" name="submit" class="btn btn-reservation">
+                                                <span><i class="fa fa-check-circle-o"></i></span>
+                                                Make a reservation
+                                            </button>
+                                        </div>
+                                            
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-md-2 hidden-sm hidden-xs"></div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="opening-time">
+                                    <h3 class="opening-time-title">Hours</h3>
+                                    <p>Mon to Fri: 7:30 AM - 11:30 AM</p>
+                                    <p>Sat & Sun: 8:00 AM - 9:00 AM</p>
+
+                                    <div class="launch">
+                                        <h4>Cake Section</h4>
+                                        <p>Mon to Sat: 12:00 PM - 5:00 PM</p>
+                                    </div>
+
+                                    <div class="dinner">
+                                        <h4>Pastry House</h4>
+                                        <p>Mon to Sat: 6:00 PM - 1:00 AM</p>
+                                        <p>Sun: 5:30 PM - 12:00 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="contact" class="contact">
+            <div class="container-fluid color-bg">
+                <div class="row dis-table">
+                    <div class="hidden-xs col-sm-6 dis-table-cell">
+                        <h2 class="section-title">Contact Us Here</h2>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 dis-table-cell">
+                        <div class="section-content">
+                            <p>Street 100, Kolaba East, Navi Mumbai, Maharashtra, India
+                             </p>
+                            <p>91-987600XXXX</p>
+                            <p>info@therelish.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <ul class="center-block">
+                                <li><a href="https://www.facebook.com/" class="fb"></a></li>
+                                <li><a href="https://twitter.com/?lang=en" class="twit"></a></li>
+                                <li><a href="https://g-plus.com/?lang=en" class="g-plus"></a></li>
+                                <li><a href="https://www.linkedin.com/?lang=en" class="link"></a></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div id="map-canvas"></div>
+            </div>
+        </div>
+
+
+
+        <section class="contact-form">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                        <div class="row">
+                             <form class="contact-form" method="post" action="contact.php">
+                                
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="form-group">
+                                        <input  name="name" type="text" class="form-control" id="name" required="required" placeholder="  Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="email" type="email" class="form-control" id="email" required="required" placeholder="  Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="subject" type="text" class="form-control" id="subject" required="required" placeholder="  Subject">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <textarea name="message" type="text" class="form-control" id="message" rows="7" required="required" placeholder="  Message"></textarea>
+                                </div>
+
+                                <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3">
+                                    <div class="text-center">
+                                        <button type="submit" id="submit" name="submit" class="btn btn-send">Send </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="copyright text-center">
+                            <p>
+                                &copy; Copyright, 2020 <a href="#">Your Website Link.</a> Designed by <a href="https://github.com/aarushi-code"  target="_blank">Aarushi Sharma</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js" ></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+        <script type="text/javascript" src="js/jQuery.scrollSpeed.js"></script>
+        <script src="js/script.js"></script>
+        
+
+    </body>
+</html>
